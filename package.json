@@ -1,0 +1,22 @@
+{
+  "name": "js-base",
+  "version": "1.0.0",
+  "description": "js learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxqdoit/js-base.git"
+  },
+  "author": "wxqdoit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wxqdoit/js-base/issues"
+  },
+  "homepage": "https://github.com/wxqdoit/js-base#readme",
+  "dependencies": {
+    "mocha": "^8.0.1"
+  }
+}
