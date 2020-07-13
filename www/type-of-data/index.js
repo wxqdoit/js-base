@@ -13,20 +13,29 @@ var num = 2;
 console.log(_var, $var, num);//_var $var 2
 
 function func1() {
-    var num = 3;
+    var num = 3;//局部变量
     console.log(num)//3
 }
 
 function func2(num) {
     num = 3;
-    num1 = 1;
-    console.log(num)////3
+    num1 = 1;//方法内部创建的全局变量
+    console.log(num)//3
 }
 
 func1(num);
 func2();
 // 先执行func2才会创建num1
 console.log(num1);//1
+
+const A = {
+    b :1,
+};
+A.b = 3;
+console.log(A.b );//3
+A = 1;//TypeError: Assignment to constant variable.
+const cl = 2;
+cl = 1;//TypeError: Assignment to constant variable.
 
 /**
  * 数据类型：基本数据类型 引用数据类型
