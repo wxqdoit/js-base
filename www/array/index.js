@@ -34,7 +34,7 @@ console.log(_unshitf, arr3);//5 [ 88, 99, 'h', 2, 3 ]
 /**
  * 1 起始位置 默认0
  * 2 截取个数，默认一个
- * 3- 追加的新元素
+ * 3- 起始位置追加新元素
  */
 var arr4 = [1, 2, 3, 4, 5, 6, 7];
 var _splice = arr4.splice(1, 2, 111, 222);
@@ -59,7 +59,7 @@ let _concat = arr5.concat(arr6, arr7);
 console.log(arr5, arr6, _concat);//[ 1, 2 ] [ 4, 5 ] [ 1, 2, 4, 5, 6, 7 ]
 
 
-//join：在每隔元素之间加入内容（不操作数组本身）,返回加入内容后字符串
+//join：在每隔元素之间加入内容，不操作数组本身,，返回加入内容后字符串
 var _join = arr7.join("----");
 console.log(_join, arr7);//6----7 [ 6, 7 ]
 
@@ -74,8 +74,7 @@ function sortOpt(a, b) {
     return a < b ? -1 : 1
 }
 
-//reverse:反转数组中的元素。
-//改变原数组 返回反转后的数组
+//reverse：反转数组中的元素，改变原数组，返回反转后的数组
 var arr9 = [1, 2, 3, "QAQ", "wtf"];
 var _reverse = arr9.reverse();
 console.log(arr9, _reverse);//[ 'wtf', 'QAQ', 3, 2, 1 ] [ 'wtf', 'QAQ', 3, 2, 1 ]
@@ -89,6 +88,7 @@ var arr10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var _indexOf1 = arr10.indexOf(1);
 var _indexOf2 = arr10.indexOf(1, 3);
 console.log(_indexOf1, _indexOf2, arr10);
+//0 -1 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 //数组迭代
 

@@ -45,7 +45,7 @@ const cl = 2;
 // 小数（最高精度17位）
 let _wtf = 0.1 + 0.2; //0.30000000000000004
 
-// 八进制(Octal) 十六进制(Hex) 不能字面表示二进制
+// 可表示八进制(Octal)十六进制(Hex)二进制(Binary)
 var n1 = 100;
 var n2 = 13.14;
 var n3 = NaN;//1-'a'
@@ -56,7 +56,8 @@ console.log(n1, n2, n3, n4, n5, n6);
 //100 13.14 NaN Infinity -Infinity Infinity
 var n7 = 0o11;//八进制
 var n8 = 0x11;//十六进制
-console.log(n7, n8);//9 17
+var nb = 0b101;//二进制
+console.log(n7, n8, nb);//9 17 5
 var n9 = 0.111111111112345678;
 var n10 = 1 - 'a';
 var n11 = parseInt("abc123");
