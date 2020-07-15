@@ -19,8 +19,8 @@ if (a1 == b) {
 }
 
 //三目运算
-var i_love_you = true;
-var you_love_me = true;
+var i_love_you = 'yes';
+var you_love_me = 'yes';
 let isTureLove = i_love_you === you_love_me ? true : false;
 console.log(isTureLove);//true
 
