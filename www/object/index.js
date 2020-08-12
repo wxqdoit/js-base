@@ -69,6 +69,16 @@ let Person = Object.create(objProtoPer);
 let r3 = objProtoPer.isPrototypeOf(Person);
 console.log(r3);//true
 
+function CC (){}
+
+CC.prototype = {
+
+};
+let c1 = new CC();
+
+console.log("-----",c1.constructor);
+
+
 // propertyIsEnumerable，检查属性是否可被枚举（for in）能遍历
 let phone = {
     name: 'xxx',

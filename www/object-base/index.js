@@ -103,14 +103,19 @@ function Person1() {
 }
 
 Person1.prototype = {
+    constructor:Person1,
     name:'zz'
 };
-Object.defineProperty(Person1.prototype,"constructor",{
-    enumerable:false,
-    value:Person1
-});
+// Object.defineProperty(Person1.prototype,"constructor",{
+//     enumerable:false,
+//     value:Person1
+// });
 let _p1 = new Person1();
 console.log(_p1.constructor);
+for(let item in Person1.prototype){
+    console.log(item)
+}
+
 
 
 
