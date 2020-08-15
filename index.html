@@ -5,15 +5,71 @@
     <title>js-learning</title>
 </head>
 <body>
+<script>
+
+    (function (window) {
+        window.$ = function (p) {
+            console.log(p)
+            if (typeof p === 'function') {
+                p()
+            } else if (typeof p !== 'string') {
+                throw new Error("selector error")
+            } else {
+                let idReg = new RegExp(/#\w+/);
+                let idSelector = p.match(idReg);
+                if (idSelector) {
+                    _$.prototype.dom = document.querySelector(p);
+                }
+                window.$ = new _$()
+                return window.$
+            }
+        };
+
+        function _$() {
+
+        }
+        _$.prototype = {
+            constructor: _$,
+            setStyle:function (prop,value) {
+                this.dom.style[prop] = value;
+                return this
+            },
+            addEvent:function (eventName,fn) {
+                if(window.addEventListener){
+                    this.dom.addEventListener(eventName, fn);
+                    return this
+                }
+                if(window.attachEvent){
+                    this.dom.attachEvent("on"+eventName, fn);
+                    return this
+                }
+            }
+        };
+
+
+    })(window);
+</script>
+
+<div id = "div" style="width: 100px; height: 100px;background: #eee">
+
+</div>
+
+
 
 <script>
     window.console.log('hello world')
+    $(function () {
+        $("#div").setStyle("background","red").addEvent("click",function () {
+            console.log($)
+            $("#div").setStyle("background","blue")
+        })
+    });
 </script>
 
 <!--外部引入文件，不能在标签里面写代码-->
 <!--解析顺序，从上到下边解析边执行-->
 <!--defer  延迟执行，当页面都加载完成之后再执行-->
 <!--async？加载完成？渲染完成？-->
-<script src="type-of-data/index.js"></script>
+<!--<script src="type-of-data/index.js"></script>-->
 </body>
 </html>
